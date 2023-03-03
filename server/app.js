@@ -16,5 +16,11 @@ app.use(express.static(path.join(__dirname, 'assets')));
 // Part 3: File paths appended to a resource
 //app.use('/stylesheets', express.static('assets/css'));
 
+
+// Bonus Practice - Serving Static Files in Express
+// Serve the files in the assets/images folder under a route resource called stickers
+app.use('/stickers', express.static('assets/images'))
+// url is http://localhost:5000/stickers/hello.png
+
 const port = 5000;
 app.listen(port, () => console.log('Server is listening on port', port));
